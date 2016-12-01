@@ -17,7 +17,7 @@ States you have not been to
     <style type="text/css">
     text{
         font-family:Helvetica, Arial, sans-serif;
-        font-size:1.5em;
+        font-size:1.25em;
         pointer-events:none;
     }
     #chart{
@@ -29,7 +29,7 @@ States you have not been to
     }
     #question{
         position: absolute;
-        width:400px;
+        width:500px;
         height:500px;
         top:0;
         left:520px;
@@ -67,9 +67,30 @@ States you have not been to
                     {"label":"Topic  1",  "value":1,  "question":"Favorite Christmas gifts from the past"},
                     {"label":"Topic  2",  "value":1,  "question":"Favorite Christmas meal"}, //font-family
                     {"label":"Topic  3",  "value":1,  "question":"Pets you would like to get"}, //color
-                    {"label":"Topic  4",  "value":1,  "question":"States you have not been to"}
+                    {"label":"Topic  4",  "value":1,  "question":"States you have not been to"},
+                    {"label":"Topic 5", "value":1, "question":"What are the three most interesting things about Christmas?"},
+                    {"label":"Topic 6", "value":1, "question":"Name five reasons you’re glad to be alive at Christmas. References to the movie \"It's a Wonderful Life\" are encouraged."},
+                    {"label":"Topic 7", "value":1, "question":"If you could have any Christmas-themed super power, what would it be and why?"},
+                    {"label":"Topic 8", "value":1, "question":"If you had a time machine for a day but it could only take you to a Christmas past, what would you do with it?"},
+                    {"label":"Topic 9", "value":1, "question":"What’s your favorite Christmas song? Why?"},
+                    {"label":"Topic 10", "value":1, "question":"If Santas Claus and the Easter Bunny had a fight, who would you like to see serve as the referee?"},
+                    {"label":"Topic 11", "value":1, "question":"What’s your favorite Christmas movie?"},
+                    {"label":"Topic 12", "value":1, "question":"If you had to get a Christmas-themed tattoo, what would you get?"},
+                    {"label":"Topic 13", "value":1, "question":"If we could go anywhere you wanted on a Christmas vacation, where would you choose? Why?"},
+                    {"label":"Topic 14", "value":1, "question":"If you could have a conversation with anyone in Christmas history, who would it be?"},
+                    {"label":"Topic 15", "value":1, "question":"What is your earliest memory of Christmas?"},
+                    {"label":"Topic 16", "value":1, "question":"What Christmas gift are you most proud of?"},
+                    {"label":"Topic 17", "value":1, "question":"If you could change one thing about your appearance but it would only change on Christmas day, what would it be?"},
+                    {"label":"Topic 18", "value":1, "question":"If you had to choose only three words to describe Christmas, what would you say?"},
+                    {"label":"Topic 19", "value":1, "question":"What is your idea of an ideal Christmas day?"},
+                    {"label":"Topic 20", "value":1, "question":"Would you rather live in a castle, on a boat, or on a cloud?"},
+                    {"label":"Topic 21", "value":1, "question":"If you were invisible where would you go and what would you do on Christmas?"},
+                    {"label":"Topic 22", "value":1, "question":"What is a Christmas quality you wish you could have more of?"},
+                    {"label":"Topic 23", "value":1, "question":"What scares you the most about Christmas and why?"},
+                    {"label":"Topic 24", "value":1, "question":"On Christmas, what makes you feel better?"},
+                    {"label":"Topic 25", "value":1, "question":"When getting ready for Christmas, what do you worry about the most?"},
+                    {"label":"Topic 26", "value":1, "question":"What is your New Year's resolution?"},
         ];
-
 
         var svg = d3.select('#chart')
             .append("svg")
@@ -106,7 +127,7 @@ States you have not been to
                 d.innerRadius = 0;
                 d.outerRadius = r;
                 d.angle = (d.startAngle + d.endAngle)/2;
-                return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius -10) +")";
+                return "rotate(" + (d.angle * 180 / Math.PI - 87.5) + ")translate(" + (d.outerRadius -10) +")";
             })
             .attr("text-anchor", "end")
             .text( function(d, i) {
@@ -154,10 +175,10 @@ States you have not been to
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
                         .attr("stroke-width", "1.5")
                         // .attr("stroke", "#A00")
-                        .attr("opacity", "0.25");
+                        .attr("opacity", "0.1");
 
                     d3.select(".slice:nth-child(" + (picked + 1) + ") text")
-                        .attr("opacity", "0.333");
+                        .attr("opacity", "0.2");
 
                     //populate question
                     d3.select("#question h1")
